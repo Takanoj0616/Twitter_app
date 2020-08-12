@@ -1,7 +1,5 @@
 <nav class="global-nav">
   <div class="container">
-
-    <%# ==========この行を追加する==========%>
     <% if user_signed_in? %>
 
       <div class="navigation">
@@ -16,8 +14,6 @@
           </li>
         </ul>
       </div>
-
-    <%# ==========ここから追加する==========%>
     <% else %>
       <div class="navigation">
         <ul class="left-actions">
@@ -27,7 +23,5 @@
         </ul>
       </div>
     <% end %>
-    <%# ==========ここまで追加する==========%>
-
   </div>
 </nav>
