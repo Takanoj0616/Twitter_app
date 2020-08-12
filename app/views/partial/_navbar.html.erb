@@ -1,16 +1,33 @@
 <nav class="global-nav">
   <div class="container">
-    <div class="navigation">
-      <ul class="left-actions">
-        <li class="nav-item">
-          <%= link_to "ホーム", root_path, class: "nav-link" %>
-        </li>
-      </ul>
-      <ul class="right-actions">
-        <li class="nav-item">
-          <%= link_to "ツイート", "#", class: "btn btn-primary tweet-btn" %>
-        </li>
-      </ul>
-    </div>
+
+    <%# ==========この行を追加する==========%>
+    <% if user_signed_in? %>
+
+      <div class="navigation">
+        <ul class="left-actions">
+          <li class="nav-item">
+            <%= link_to "ホーム", root_path, class: "nav-link" %>
+          </li>
+        </ul>
+        <ul class="right-actions">
+          <li class="nav-item">
+            <%= link_to "ツイート", "#", class: "btn btn-primary tweet-btn" %>
+          </li>
+        </ul>
+      </div>
+
+    <%# ==========ここから追加する==========%>
+    <% else %>
+      <div class="navigation">
+        <ul class="left-actions">
+          <li class="nav-item">
+            <%= link_to "Techpit Tweet", "#", class: "nav-brand" %>
+          </li>
+        </ul>
+      </div>
+    <% end %>
+    <%# ==========ここまで追加する==========%>
+
   </div>
 </nav>
