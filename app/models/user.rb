@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :username, uniqueness: true, length: { in: 1..15 }
+  has_many :tweets, dependent: :destroy
 end
