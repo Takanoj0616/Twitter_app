@@ -19,14 +19,14 @@
         <ul class="left-actions">
           <li class="nav-item dropdown">
             <%= link_to "#", class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", "data-toggle": :dropdown, "aria-haspopup": :true, "aria-expanded": false do %>
-              
+
             <% end %>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
           <li class="nav-item">
-            <%= link_to "Techpit Tweet", "#", class: "nav-brand" %>
+            <%= link_to "Techpit Tweet", new_tweet_path, class: "nav-brand" %>
           </li>
         </ul>
       </div>
